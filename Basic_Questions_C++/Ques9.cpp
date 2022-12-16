@@ -12,4 +12,5 @@ int main(){
         ans=ans*i;
     }
     cout<<ans;
+    return 0;
 }
