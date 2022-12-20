@@ -6,7 +6,7 @@ using namespace std;
 using namespace std;
 
 int main(){
-    int n,i;
+    int n,i,count=0;
     bool is_prime = true;
 
     cout<<"Enter the number : ";
@@ -17,15 +17,24 @@ int main(){
         is_prime = false;
     }
     //loop to check if n is prime
-    for(i=2;i<=n/2;i++){
+    for(i=2;i<n;i++){
         if(n%i == 0){
-            is_prime = false;
+            // is_prime = false;
+            // cout<<"N is not a prime number ";
+            count += 1;
+
             break;
-        }   
+        }
     }
-    if(is_prime)
-        cout<< n <<" " << "is a Prime number";
-    else
-        cout<< n <<" " <<"is not a prime number";
+    if(count == 0){
+            cout<<"N is Prime ";
+        }
+        else{
+            cout<<"N is not a prime ";
+        }
+    // if(is_prime)
+    //     cout<< n <<" " << "is a Prime number";
+    // else
+    //     cout<< n <<" " <<"is not a prime number";
     return 0;
 }
